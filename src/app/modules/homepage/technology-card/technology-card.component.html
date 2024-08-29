@@ -1,0 +1,25 @@
+<section class="high-score-container">
+    <div class="heading">
+        <h2>Technology</h2>
+        <!-- <button class="button" style="padding: 5px 10px;">All view</button> -->
+    </div>
+    <br>
+    <div class="high-score-row">
+        @defer (on viewport) {
+        @for (highItem of highScore; track highItem) {
+        <div class="high-score-card">
+            <div class="card-item">
+                <img [src]="highItem.imgName" [alt]="highItem.Para">
+            </div>
+            <div class="card-item">
+                <h3>{{highItem.numberCount}}</h3>
+                <p>{{highItem.Para}}</p>
+            </div>
+        </div>
+        }
+        } @placeholder {
+        <div>Loading..</div>
+        }
+
+    </div>
+</section>

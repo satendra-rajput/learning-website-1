@@ -1,0 +1,385 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.layout-container {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+
+  .layout-row {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .layout-menu {
+      width: 100%;
+      height: 65px;
+      color: #fff;
+      //this is space code like flesible
+      .example-spacer {
+        flex: 1 1 auto;
+      }
+
+      .mat-toolbar {
+        width: 100%;
+        height: 65px;
+        position: fixed;
+        z-index: 999;
+        background-color: #072538;
+        box-shadow: 0px 0px 2px #ccc;
+        color: #fff;
+
+        mat-icon {
+          color: #fff !important;
+        }
+
+        .logo {
+          width: 100%;
+          height: 65px;
+          border-radius: 5px;
+          padding: 18px;
+          margin-left: 0px;
+          cursor: pointer;
+          margin-top: 0px;
+        }
+
+        .logouser{
+          border-radius: 50%;
+          margin: 0px 10px;
+          cursor: pointer;
+          margin-top: 8px;
+          background: #ff4500;
+          padding: 12px 16px;
+        }
+      }
+    }
+  }
+
+  .layout-mainpenal {
+    .mat-drawer-container  {
+      width: 100%;
+      margin: auto;
+      background-color: #050513 !important;
+      color: #fff;
+
+      .mat-drawer {
+        width: 20%;
+        height: 100%;
+        background-color: #222b45;
+        box-shadow: 0px 0px 8px #eeee;
+        border-radius: 0px;
+        color: #fff !important;
+
+        mat-icon {
+          color: #fff !important;
+        }
+      }
+
+      .mat-drawer-content {
+        width:80%;
+        position: relative;
+        z-index: 1;
+        display: block;
+        min-height: 100vh;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .layout-footer{
+    width: 100%;
+    border-top: .5px solid #fff;
+  }
+}
+
+.clickcurser {
+  cursor: pointer;
+  color: #000;
+  display: none;
+}
+
+@media (max-width:992px) {
+  .layout-container {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+  
+    .layout-row {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  
+      .layout-menu {
+        width: 100%;
+        height: 65px;
+        color: #fff;
+        //this is space code like flesible
+        .example-spacer {
+          flex: 1 1 auto;
+        }
+  
+        .mat-toolbar {
+          width: 100%;
+          height: 65px;
+          position: fixed;
+          z-index: 999;
+          background-color: #072538;
+          box-shadow: 0px 0px 2px #ccc;
+          color: #fff;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+  
+          .logo {
+            width: 100%;
+            height: 65px;
+            border-radius: 5px;
+            padding: 18px;
+            margin-left: 0px;
+            cursor: pointer;
+            margin-top: 0px;
+          }
+  
+          .logouser {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px 10px;
+            cursor: pointer;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  
+    .layout-mainpenal {
+      .mat-drawer-container  {
+        width: 100%;
+        margin: auto;
+        background-color: #050513 !important;
+        color: #fff;
+  
+        .mat-drawer {
+          width: 20%;
+          height: -webkit-fill-available;
+          background-color: #222b45;
+          box-shadow: 0px 0px 8px #eeee;
+          border-radius: 0px;
+          color: #fff !important;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+        }
+  
+        .mat-drawer-content {
+          width:80%;
+          position: relative;
+          z-index: 1;
+          display: block;
+          height: 100%;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .layout-container {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+  
+    .layout-row {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  
+      .layout-menu {
+        width: 100%;
+        height: 65px;
+        color: #fff;
+        //this is space code like flesible
+        .example-spacer {
+          flex: 1 1 auto;
+        }
+  
+        .mat-toolbar {
+          width: 100%;
+          height: 65px;
+          position: fixed;
+          z-index: 999;
+          background-color: #072538;
+          box-shadow: 0px 0px 2px #ccc;
+          color: #fff;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+  
+          .logo {
+            width: 100%;
+            height: 65px;
+            border-radius: 5px;
+            padding: 18px;
+            margin-left: 0px;
+            cursor: pointer;
+            margin-top: 0px;
+          }
+  
+          .logouser {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px 10px;
+            cursor: pointer;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  
+    .layout-mainpenal {
+      .mat-drawer-container  {
+        width: 100%;
+        margin: auto;
+        background-color: #050513 !important;
+        color: #fff;
+  
+        .mat-drawer {
+          width: 60%;
+          height: -webkit-fill-available;
+          background-color: #222b45;
+          box-shadow: 0px 0px 8px #eeee;
+          border-radius: 0px;
+          color: #fff !important;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+        }
+  
+        .mat-drawer-content {
+          width:100%;
+          position: relative;
+          z-index: 1;
+          display: block;
+          height: 100%;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+  .clickcurser {
+    cursor: pointer;
+    color: #000;
+    display: block;
+  }
+}
+
+@media (max-width:480px) {
+  .layout-container {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+  
+    .layout-row {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  
+      .layout-menu {
+        width: 100%;
+        height: 65px;
+        color: #fff;
+        //this is space code like flesible
+        .example-spacer {
+          flex: 1 1 auto;
+        }
+  
+        .mat-toolbar {
+          width: 100%;
+          height: 65px;
+          position: fixed;
+          z-index: 999;
+          background-color: #072538;
+          box-shadow: 0px 0px 2px #ccc;
+          color: #fff;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+  
+          .logo {
+            width: 100%;
+            height: 65px;
+            border-radius: 5px;
+            padding: 18px;
+            margin-left: 0px;
+            cursor: pointer;
+            margin-top: 0px;
+          }
+  
+          .logouser {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0px 10px;
+            cursor: pointer;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  
+    .layout-mainpenal {
+      .mat-drawer-container  {
+        width: 100%;
+        margin: auto;
+        background-color: #050513 !important;
+        color: #fff;
+  
+        .mat-drawer {
+          width: 60%;
+          height: -webkit-fill-available;
+          background-color: #222b45;
+          box-shadow: 0px 0px 8px #eeee;
+          border-radius: 0px;
+          color: #fff !important;
+  
+          mat-icon {
+            color: #fff !important;
+          }
+        }
+  
+        .mat-drawer-content {
+          width:100%;
+          position: relative;
+          z-index: 1;
+          display: block;
+          height: 100%;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+
+  .clickcurser {
+    cursor: pointer;
+    color: #000;
+    display: block;
+  }
+}
+

@@ -1,0 +1,29 @@
+<div class="sidebar-fuild">
+    <!-- <div class="profile">
+        <img src="https://satendra.ssbrinet.com/assets/images/homepage/sate.jpg" alt="profile_picture" />
+        <h3>user.fullName</h3>
+    </div> -->
+
+    <div class="admin-link">
+        <ul>
+            <li class="icons">
+                <mat-icon>dashboard_customize</mat-icon>
+                <a routerLink="/admin/default"  routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
+            </li>
+            
+            <!-- Users Links -->
+            @for (item of menuSidebar; track $index) {
+            <div class="admin-link-heading">
+                <span class="heading-span">{{ item.link_name }} </span>
+            </div>
+            @for (Subitem of item.sub_menu; track $index) {
+            <li class="icons">
+                <mat-icon>{{ Subitem.icons }}</mat-icon>
+                <a [routerLink]="Subitem.link"  routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact:true}">{{ Subitem.link_name }}</a>
+            </li>
+            } }
+        </ul>
+    </div><br><br>
+</div>

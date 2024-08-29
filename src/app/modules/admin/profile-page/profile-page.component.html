@@ -1,0 +1,128 @@
+<section class="dashboard">
+    <div class="dashboard-top-menu display-flex">
+        <div class="menuLink"><a href="">Home</a>»<a href="">Admin</a>»<a href="">Edit User</a></div>
+        <div class="btn" title="Add New Article">Add + Page</div>
+    </div><br>
+    <div class="add-form">
+        <div class="add-heaing">
+            @if (editMode) {
+            <h2 class="heading">Edit User</h2>
+
+            }@else {
+            <h2 class="heading">Profile Details</h2>
+            }
+            <hr><br>
+        </div>
+        <form class="form-card" #AddNewUser="ngForm" (ngSubmit)="updateUser(AddNewUser); AddNewUser.reset()">
+            <div class="card-form">
+                <div class="form-wrapper">
+                    <img src="https://satendra.ssbrinet.com/assets/images/homepage/sate.jpg" alt="UserName"
+                        class="userImage">
+                </div>
+
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="email">Email-id:-</label>
+                    <input type="email" name="email" id="email" class="input-control" required
+                        [placeholder]="userdetails.data.email" [(ngModel)]="userdetails.data.email">
+                    <!-- <mat-icon class=" icons-control">email</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <p><b>Email ID :-</b> <span>{{userdetails.data.email}}</span></p>
+                    <br>
+                </div>
+                }
+
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="password">Password:-</label>
+                    <input type="password" name="password" id="password" required class="input-control"
+                        placeholder="Enter Password" [(ngModel)]="userdetails.data._id">
+                    <!-- <mat-icon class=" icons-control">password</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <p><b>Password :-</b> <span>*********</span></p>
+                    <br>
+                </div>
+                }
+
+
+
+
+            </div>
+            <!-- ******************************************** -->
+            <div class="card-form">
+                <br><br><br>
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="fullName">Full Name:-</label>
+                    <input type="text" name="fullName" id="fullName" class="input-control" required
+                        [placeholder]="userdetails.data.fullName" [(ngModel)]="userdetails.data.fullName">
+                    <!-- <mat-icon class="icons-control">person</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <br>
+                    <p><b>Full Name :-</b> <span>{{userdetails.data.fullName}}</span></p>
+                    <br>
+                </div>
+                }
+
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="username">Username:-</label>
+                    <input type="text" name="username" id="username" class="input-control" required
+                        [placeholder]="userdetails.username" [(ngModel)]="userdetails.username">
+                    <!-- <mat-icon class="icons-control">supervised_user_circle</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <p><b>Username :-</b> <span>{{userdetails.username}}</span></p>
+                    <br>
+                </div>
+                }
+
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="phone">Mobile Number:-</label>
+                    <input type="text" name="phone" id="phone" class="input-control" required
+                        [placeholder]="userdetails.data.phone" [(ngModel)]="userdetails.data.phone">
+                    <!-- <mat-icon class="icons-control">phone_iphone</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <p><b>Mobile Number :-</b> <span>{{userdetails.data.phone}}</span></p>
+                    <br>
+                </div>
+                }
+
+                @if (editMode) {
+                <div class="form-wrapper">
+                    <label for="designation">Designation:-</label>
+                    <input type="text" name="designation" id="designation" required class="input-control"
+                        [placeholder]="userdetails.data.designation" [(ngModel)]="userdetails.data.designation">
+                    <!-- <mat-icon class="icons-control">group_work</mat-icon> -->
+                </div>
+                }@else {
+                <div class="form-wrapper">
+                    <p><b>Designation :-</b> <span>{{userdetails.data.designation}}</span></p>
+                    <br>
+                </div>
+                }
+
+                <div class="btn-group">
+                    @if (editMode) {
+                    <button type="submit" class="btn-submit" [disabled]="AddNewUser.invalid"
+                        (click)="editMode=false">Submit</button>
+                    }@else {
+                    <button type="button" class="btn-submit" (click)="editModeOpen()">Update</button>
+                    }
+                </div>
+            </div>
+        </form>
+        <br><br>
+    </div>
+    <br><br>
+</section>

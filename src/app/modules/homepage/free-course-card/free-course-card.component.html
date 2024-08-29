@@ -1,0 +1,31 @@
+<section class="paid-container">
+    <div class="heading">
+        <h2>Courses</h2>
+        <button class="button" style="padding: 5px 10px;">All Explore </button>
+    </div>
+    <div class="paid-row">
+        @defer (on viewport) {
+        @for (item of PaidCourse; track item) {
+        <div class="paid-card">
+            <div class="courseImg">
+                <img [src]="item.imgName" alt="" srcset="">
+            </div>
+            <div class="paid-title">
+                <h4>{{item.TitleName}}</h4>
+            </div>
+            <div class="paid-icons">
+                <p>{{item.categories}}</p>
+            </div>
+
+            <div class="paid-footer">
+                <p>{{item.CountInterest}}</p>
+                <p><span style="font-size:16px;"><del> <strong>{{item.Discount}}</strong></del></span></p>
+                <button class="button">Explore now</button>
+            </div>
+        </div>
+        }
+        } @placeholder {
+        <div>Loading..</div>
+        }
+    </div>
+</section>

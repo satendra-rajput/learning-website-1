@@ -1,0 +1,59 @@
+<div class="ssbr-container">
+    <div class="ssbr-row">
+        <div class="login-box">
+            <form [formGroup]="registerForm" (submit)="registerLogin();  registerForm.reset()">
+                <div class="logo-form">
+                    <img src="assets/images/logo.png" alt="">
+                    <span><a routerLink="/"><mat-icon>close</mat-icon></a></span>
+                </div>
+                <h2>Create Account</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <mat-icon>person</mat-icon>
+                        <!-- <ion-icon name="mail"></ion-icon> -->
+                    </span>
+                    <input type="text" formControlName="fullName">
+                    <label>Full Name</label>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <mat-icon>mark_email_unread</mat-icon>
+                        <!-- <ion-icon name="mail"></ion-icon> -->
+                    </span>
+                    <input type="email"  formControlName="email">
+                    <label>Email</label>
+                    <div class="input-line"></div>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <mat-icon>phone</mat-icon>
+                        <!-- <ion-icon name="mail"></ion-icon> -->
+                    </span>
+                    <input type="phone"  formControlName="phone">
+                    <label>Phone</label>
+                    <div class="input-line"></div>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <mat-icon>password</mat-icon>
+                        <!-- <ion-icon name="lock-closed"></ion-icon> -->
+                    </span>
+                    <input type="password" formControlName="password">
+                    <label>Password</label>
+                    <div class="input-line"></div>
+                </div>
+                <button type="submit" [disabled]="registerForm.invalid">Create Account</button>
+                <div class="register-link">
+                    <p>By signing up, you agree to our <a routerLink="/auth/login">Terms of Use</a> <br> and <a routerLink="/auth/login">Privacy Policy.</a></p>
+                </div>
+
+                <div class="register-link">
+                    <p>Already have an account? <a routerLink="/auth/login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<section class="blogs-container">
+    <div class="heading">
+        <h2>Latest Blogs</h2>
+        <button class="button">All Blogs</button>
+    </div>
+    <div class="blogs-row">
+        @for (Blog_item of Blogs; track  Blog_item) {
+        <a [href]="Blog_item.LinkUrl">
+            <div class="blogs-item">
+                <div class="blog-img">
+                    <img [src]="Blog_item.imgName" alt="">
+                </div>
+                <div class="blog-title">
+                    <h3>{{Blog_item.TitleName}}</h3>
+                </div>
+            </div>
+        </a>
+        }
+    </div>
+</section>

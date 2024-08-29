@@ -1,0 +1,30 @@
+// _mixins.scss
+
+// Example of a mixin for clearfix
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  // Example of a mixin for text ellipsis
+  @mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  // Example of a mixin for responsive font size
+  @mixin responsive-font($size) {
+    font-size: $size;
+  
+    @media (min-width: 768px) {
+      font-size: $size * 1.2;
+    }
+  
+    @media (min-width: 1024px) {
+      font-size: $size * 1.4;
+    }
+  }

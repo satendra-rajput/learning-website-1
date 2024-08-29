@@ -1,0 +1,43 @@
+<div class="ssbr-container">
+  <div class="ssbr-row">
+    <div class="login-box">
+      <form [formGroup]="loginForm" (submit)="LoginSumbit(); loginForm.reset()">
+        <div class="logo-form">
+          <img src="assets/images/logo.png" alt="" />
+          <span
+            ><a routerLink="/"><mat-icon>close</mat-icon></a></span
+          >
+        </div>
+        <h2>Login</h2>
+        <div class="input-box">
+          <span class="icon">
+            <mat-icon>mark_email_unread</mat-icon>
+          </span>
+          <input type="email" formControlName="email" />
+          <label>Email</label>
+          <div class="input-line"></div>
+        </div>
+
+        <div class="input-box">
+          <span class="icon">
+            <mat-icon>password</mat-icon>
+          </span>
+          <input type="password" formControlName="password" />
+          <label>Password</label>
+          <div class="input-line"></div>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#"> Forgot Password?</a>
+        </div>
+
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+        <div class="register-link">
+          <p>
+            Don't have an account? <a routerLink="/auth/register">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+// Buttons
+.button {
+    display: inline-block;
+    padding: $spacing-unit $spacing-unit * 1;
+    font-size: $font-size-base;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+  
+    &:hover {
+      color: #fff !important;
+    background-color: #010107 !important;
+    box-shadow: 0px 0px 10px #26A69A;
+    border-radius: 5px !important;
+    transform: scale(1.2);
+    }
+  
+    &--secondary {
+      background-color: $secondary-color;
+  
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+  
+  // Form elements
+  .input {
+    width: 100%;
+    padding: $spacing-unit;
+    font-size: $font-size-base;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+    }
+  }

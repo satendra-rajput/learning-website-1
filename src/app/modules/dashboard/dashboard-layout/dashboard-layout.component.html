@@ -1,0 +1,200 @@
+<div class="layout-container">
+    <div class="layout-row">
+        <div class="layout-menu">
+            <mat-toolbar>
+                <mat-icon (click)="sidenav.toggle()" class="clickcurser">sort</mat-icon>
+                <span>
+                    <div class="logo"><a href="/">
+                            <h2>Satendra <span>Rajput</span></h2>
+                        </a></div>
+                </span>
+            
+                <span class="example-spacer"></span>
+                <span>{{autherDetails.data?.fullName}}</span>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>notifications_on</mat-icon>
+                </button>
+                <span [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu logouser">
+                    <strong class="logouser">{{autherDetails.data?.fullName[0]}}</strong></span>
+                <mat-menu #menu="matMenu">
+                    <span style="padding-left: 10px;">{{autherDetails.data?.fullName}}</span>
+                    <mat-divider></mat-divider>
+                    @if (autherDetails.data?.designation === "admin") {
+                    <button mat-menu-item>
+                        <mat-icon>person</mat-icon>
+                        <span>My Profile</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>receipt_long</mat-icon>
+                        <span>Post History</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>help</mat-icon>
+                        <span>Support</span>
+                    </button>
+                 
+                    }
+                    @else {
+                    <button mat-menu-item>
+                        <mat-icon>person</mat-icon>
+                        <span>My Profile</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>add_task</mat-icon>
+                        <span>My Courses</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>currency_rupee</mat-icon>
+                        <span>Become a member</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>shopping_cart</mat-icon>
+                        <span>My Orders</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Account Settings</span>
+                    </button>
+            
+                    }
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="logoutUser()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>Lock Account</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar>
+        </div>
+
+
+        <div class="layout-mainpenal">
+            <mat-drawer-container class="example-container">
+                <mat-drawer #sidenav mode="side" opened>
+                  <app-dashboard-sidebar></app-dashboard-sidebar>
+                </mat-drawer>
+                <mat-drawer-content>
+                    <div class="mainpenal">
+                        <router-outlet></router-outlet>
+                    </div>
+                </mat-drawer-content>
+            </mat-drawer-container>
+        </div>
+
+
+        <div class="layout-footer">
+            <app-footer-card></app-footer-card>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- 
+<section class="layout-containet">
+    <div class="layout-row">
+        <div class="layout-item-nav">
+            <mat-toolbar>
+                <mat-icon (click)="sidenav.toggle()" class="clickcurser">sort</mat-icon>
+                <span>
+                    <div class="logo"><a href="/">
+                            <h2>Satendra <span>Rajput</span></h2>
+                        </a></div>
+                </span>
+            
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>notifications_on</mat-icon>
+                </button>
+                <span [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><img src="assets/images/logo.png"
+                        alt="Ssbrinet" class="logouser"></span>
+                <mat-menu #menu="matMenu">
+                    <span style="padding-left: 10px;">{{autherDetails.data.fullName}}</span>
+                    <mat-divider></mat-divider>
+                    @if (autherDetails.data.designation === "admin") {
+                    <button mat-menu-item>
+                        <mat-icon>person</mat-icon>
+                        <span>My Profile</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>receipt_long</mat-icon>
+                        <span>Post History</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>help</mat-icon>
+                        <span>Support</span>
+                    </button>
+                 
+                    }
+                    @else {
+                    <button mat-menu-item>
+                        <mat-icon>person</mat-icon>
+                        <span>My Profile</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>add_task</mat-icon>
+                        <span>My Courses</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>currency_rupee</mat-icon>
+                        <span>Become a member</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>shopping_cart</mat-icon>
+                        <span>My Orders</span>
+                    </button>
+            
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Account Settings</span>
+                    </button>
+            
+                    }
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item (click)="logoutUser()">
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>Lock Account</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar>
+        </div>
+
+        <div class="layout-item-page">
+            <mat-drawer-container class="example-container">
+                <mat-drawer #sidenav mode="side" opened>
+                    @if (autherDetails.data.designation === "admin") {
+                    <app-admin-side></app-admin-side>
+                    }@else {
+                    <app-dashboard-side></app-dashboard-side>
+                    }
+            
+                </mat-drawer>
+                <mat-drawer-content>
+                    <div class="mainpenal">
+                        <router-outlet></router-outlet>
+                    </div>
+                </mat-drawer-content>
+            </mat-drawer-container>
+        </div>
+        <app-footer-card></app-footer-card>
+    </div>
+</section> -->
+
+

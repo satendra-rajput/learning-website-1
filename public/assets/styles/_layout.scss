@@ -1,0 +1,28 @@
+// _layout.scss
+
+// Container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $padding-base;
+    
+    @media (min-width: 768px) {
+      max-width: 750px;
+    }
+  
+    @media (min-width: 1024px) {
+      max-width: 960px;
+    }
+  }
+  
+  // Flexbox utilities
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }

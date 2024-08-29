@@ -1,0 +1,26 @@
+.about-layout{
+    width: 100%;
+    height: 100vh;
+
+    .about-layout-row{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+
+        .about-layout-menu{
+            width: 100%;
+            height: 65px;
+            background-color: aquamarine;
+        }
+
+        .about-layout-body{
+            width: 85%;
+            height: auto;
+            margin: auto;
+            background-color: #072538;
+            color: #fff;
+            padding: 10px;
+        }
+    }
+}

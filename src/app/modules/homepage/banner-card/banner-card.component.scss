@@ -1,0 +1,254 @@
+.banner {
+    // background: linear-gradient(180deg,#010107 70px,rgba(225,235,255,0) 290px);
+    // background-image: url(/assets/images/support.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
+    background-color: #010107;
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    min-height: auto;
+    padding: 65px 80px;
+}
+
+.text-container {
+    width: 85%;
+    flex-basis: 50%;
+    color: #fff;
+    transform: translateX(50px);
+    animation: fadeInUp 0.9s ease-in-out forwards;
+}
+
+.text-container h1{
+  
+    padding-top: 20px;
+    position: relative;
+}
+
+.text-container h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    transition: 1s;
+}
+
+.banner-tut{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // animation: DVD 3s linear infinite alternate;
+}
+.banner-tut-icons img{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ff4500;
+    border-radius: 50px;
+    margin: 0px 6px;
+    cursor:pointer;
+    padding: 5px;
+    transition: 0.5s;
+    background: #fff;
+
+}
+.banner-tut-icons img:hover{
+    transform: scale(1.5);
+}
+
+.text-container p {
+    padding: 20px 0px;
+}
+
+.text-container .btn-banner {
+    background:orangered;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.text-container .btn-banner:hover {
+    background: #26A69A;
+    color: #fff;
+    // padding: 8px 16px;
+    transform: skewX(10deg);
+    box-shadow: 0px 0px 10px #26A69A;
+    border-radius: 50px;
+}
+.mat-icon {
+    -webkit-user-select: none;
+    user-select: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 18px;
+    width: 24px;
+    overflow: hidden;
+}
+
+.text-container p span {
+    color: #26A69A;
+    padding: 0px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-text {
+    margin-left: 10px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 6px;
+    color: #ff4500;
+    white-space: nowrap;
+    animation: typing 10s steps(38) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0ch;
+    }
+
+    50% {
+        width: 16ch;
+    }
+
+    100% {
+        width: 0ch;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-container {
+    transform: translateY(50px);
+    animation: fadeInUp 0.9s ease-in-out forwards;
+}
+
+.image-container img {
+    transition: 1s;
+    width: 450px;
+    height: 350px;
+    border-radius: 50px;
+    transform: rotate3d(1, 1, 1, 45deg);
+    // box-shadow: 2px 12px 53px #6610f2;
+}
+
+.image-container img:hover {
+   // transform: rotate3d(1, 1, 1, 0deg);
+    transform: perspective(100px);
+}
+
+
+
+@media (max-width: 920px) {
+    .banner {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 0px 10px;
+    }
+}
+
+
+.image-container img {
+    // border-radius: 50%;
+    // border: 2px solid #11e629;
+    transition: 1s;
+}
+
+
+@media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .banner-tut{
+        display: contents;
+        text-align: center;
+    }  
+
+    .image-container img {
+        transform: rotate3d(1, 1, 1, 45deg);
+    box-shadow: -38px 27px 35px #6610f2;
+        transition: 1s;
+        padding: 25px 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 50px 0px;
+    }
+
+    .text-container h1 {
+        font-size: 24px;
+        padding: 50px 0px;
+        position: relative;
+    }
+
+    .banner-tut{
+        display: contents;
+        text-align: center;
+    }   
+
+    .text-container p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .image-container{
+        width: 90%;
+        margin: auto;
+
+    }
+    .image-container img {
+        width: 90%;
+        transition: 1s;
+        padding: 25px 6px;
+        margin: 0px 0px;
+        transform: rotate3d(1, 1, 1, 45deg);
+        box-shadow: 3px 7px 60px #6610f2;
+    }
+
+    .typing-text {
+        font-size: 18px;
+    }
+    
+}
