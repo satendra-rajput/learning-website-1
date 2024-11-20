@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:8080/api/v1';
+const apiUrl = 'https://ssbrinet-api.onrender.com/api/v1';
 
 export const APIEndPoint={
     AUTH:{
